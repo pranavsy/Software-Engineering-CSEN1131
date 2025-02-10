@@ -1,0 +1,37 @@
+Iterative Development of Weather Modeling using Quadratic Solution
+We will implement the weather modeling system step by step using iterative development, improving functionality in each stage.
+
+Iteration 1: Basic Hardcoded Version
+We start with a simple implementation where the input values are hardcoded in the script.
+
+# Iteration 1: Hardcoded values
+t = 30 
+h = 50 
+wind = 15 
+w = 0.5 * (t ** 2) - (0.2 * h) + (0.1 * wind) - 15
+if w > 10:
+    print("Sunny")
+elif 0 <= w <= 10:
+    print("Windy")
+elif -10 <= w < 0:
+    print("Cloudy")
+else:
+    print("Rainy")
+
+Iteration 2: Taking User Input from Keyboard
+We modify the program to accept user input dynamically instead of hardcoded values.
+# Iteration 2: Taking user input
+t = int(input("Enter Temperature: "))
+h = int(input("Enter Humidity: "))
+wind = int(input("Enter Wind Speed: "))
+
+w = 0.5 * (t ** 2) - (0.2 * h) + (0.1 * wind) - 15
+
+if w > 10:
+    print("Sunny")
+elif 0 <= w <= 10:
+    print("Windy")
+elif -10 <= w < 0:
+    print("Cloudy")
+else:
+    print("Rainy")
